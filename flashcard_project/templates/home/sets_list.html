@@ -1,0 +1,10 @@
+{% extends 'base_bootstrap.html' %}
+{% load flashcard_extras %}
+{% block content %}
+
+<ul>
+{% for set in sets %}
+    <li> {{set | set_details }} </li>
+{% endfor %}
+</ul>
+{% endblock %}
