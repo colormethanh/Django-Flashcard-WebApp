@@ -40,3 +40,15 @@ class SetCreateView(View):
             form.save()
         success_url = reverse_lazy('flashcard:sets_list')
         return redirect(success_url)
+
+class SetDetailView(View):
+    template = 'home/set_detail.html'
+
+    def get(self, request, slug):
+
+        current_set = Set.objects.get(slug = slug)
+
+        cards = Card.objects.filter(of_set = current_set)
+
+        return render(request, self.template, {"slug": slug, "cards":cards }  )
+
