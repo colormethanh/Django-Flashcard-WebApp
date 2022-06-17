@@ -6,9 +6,11 @@
 
     <h1> set of {{slug}} </h1>
 
-    {% if cards %}
+
     {{ cards | prnt_cards }}
-    {% endif %}
+
+    <a href="{% url 'flashcard:card_create' slug  %}"> Add card </a>
+
 
 {% endblock %}
 

@@ -21,8 +21,12 @@ def prnt_cards(cards):
 
     title = "<h3> Cards list </h3>"
     header = "<ul>"
-    cardlst = [escape(c.front) for c in cards]
-    cardlst = "".join([f"<li> {c} </li>" for c in cardlst ])
+
+    if cards :
+        cardlst = [escape(c.front) for c in cards]
+        cardlst = "".join([f"<li> {c} </li>" for c in cardlst ])
+    else:
+        cardlst = '<li> Currently there are no cards </li>'
     footer = "</ul>"
 
     
