@@ -2,5 +2,9 @@
 
 
 {% block content %}
-<h1> Hello World! </h1>
+<h1> Welcome to my Flash card app! </h1>
+
+<a href="{% url 'flashcard:sets_list' %} " ><p> Click here for a list of sets! </p></a>
+<p></p>
+<a href="{% url 'flashcard:set_create' %} " ><p> Click here to create a new study set! </p></a>
 {% endblock %}

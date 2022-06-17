@@ -1,10 +1,12 @@
 {% extends 'base_bootstrap.html' %}
 {% load flashcard_extras %}
+
+
 {% block content %}
 
 <ul>
 {% for set in sets %}
-    <li> {{set | set_details }} </li>
+    <a href="{{ set.get_absolute_url }}" ><li> {{set | set_details }} </li></a>
 {% endfor %}
 </ul>
 {% endblock %}

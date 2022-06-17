@@ -1,0 +1,17 @@
+{% extends 'base_bootstrap.html' %}
+{% load flashcard_extras %}
+
+
+{% block content %}
+
+    <h1> set of {{slug}} </h1>
+
+
+    {{ cards | prnt_cards }}
+
+    <a href="{% url 'flashcard:card_create' slug  %}"> Add card </a>
+
+
+{% endblock %}
+
+
