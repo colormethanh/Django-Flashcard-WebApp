@@ -1,0 +1,18 @@
+{% extends 'base_bootstrap.html' %}
+
+{% block content %}
+
+
+
+<P>
+{{ setof }}
+</P>
+
+{% for card in cards %}
+
+{{card.front}} | {{card.back}} <br>
+    
+{% endfor %}
+
+
+{% endblock %}
